@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Calcular Utilidades</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ 
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Calcular Ganancias</h1>
+
+<script>
+
+
+function calcular(){
+    
+    var a = document.f1.a.value;
+    var b = document.f1.b.value;
+    var c = document.f1.c.value;
+    var d = document.f1.d.value;
+    var e = document.f1.e.value;
+   g=parseFloat(a)*(parseFloat(b)/100);
+   document.f1.e.value=g;
+
+   g=parseFloat(a)*(parseFloat(b)/100)+parseFloat(a)*(parseFloat(c)/100)+parseFloat(a);
+   document.f1.d.value=g;
+    
+}
+
+</script> 
+
+
+
+<form name="f1" action="calculadora.html" method="POST">
+    <div class="form-group">
+    
+    <br>	
+    <label for="numero1">Valor de compra:</label>
+    <input type="text" class="form-control" id="a" placeholder="Ingrese un número" name="a">
+	<br>
+
+    <br>
+    <label for="numero2">% Utilidad o Gnanacia:</label>
+    <input type="text" class="form-control" id="b" placeholder="Ingrese un número" name="b">
+    <br>
+
+    <br>
+    <label for="numero2">% IVA:</label>
+    <input type="text" class="form-control" id="c" placeholder="Ingrese un número" name="c">
+    <br>
+
+    <input type="Button" name="" value="Calcular" onclick="calcular()" class="btn btn-dark">
+    <input type="Button" name="" value="Borrar" onclick="reset()" class="btn btn-dark">
+    
+	<br><br>
+    <label for="resultado">Valor Venta:</label>
+    <input type="text" class="form-control" id="d" name="d" placeholder="Valor de Venta">
+    <label for="resultado">Ganancias:</label>
+    <input type="text" class="form-control" id="e" name="e" placeholder="Ganancia">
+
+	</div>
+
+  	</form>
+
+
+      
+</div>
+ <style>
+    body {
+      background-color: #bde5c4;
+    }
+  </style>
+
+</body>
+</html>
